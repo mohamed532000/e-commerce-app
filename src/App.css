@@ -23,7 +23,6 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
 .App-link {
   color: #61dafb;
 }
@@ -34,5 +33,112 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+.to-top-btn {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  border: none;
+  outline: none;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 81, 0);
+  border-radius: 50%;
+  cursor: none;
+  transition: .5s;
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+}
+.to-top-btn.active {
+  opacity: 1;
+  visibility: visible;
+}
+.to-top-btn:hover {
+  animation: to-top-animate 2s ease-in infinite;
+}
+@keyframes to-top-animate {
+  0%,100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-4px);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+  75% {
+    transform: translateY(-4px);
+  }
+}
+.to-top-btn > i {
+  font-size: 20px;
+  color: snow;
+  transform: rotate(-90deg);
+}
+.movableElement {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  pointer-events: none;
+  z-index: 99999999999;
+  display: flex;
+}
+.movableElement > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999999999;
+}
+.movableElement > span {
+  position: absolute;
+  top: 0px;
+  left: 1px;
+  width: 0px;
+  height: 0px;
+  transition: .3s linear;
+  border-radius: 50%;
+  z-index: 99999999999;
+}
+.movableElement > span.clicked {
+  width: 6px;
+  height: 6px;
+  animation: mouse-animate .5s linear 1 both;
+}
+@keyframes mouse-animate {
+  0% {
+    box-shadow: 
+    0 0 0 0px rgb(9 175 232),
+    0 0 0 0px rgb(84, 198, 236),
+    0 0 0 0px rgb(112, 202, 231);
+  }
+  50% {
+    box-shadow: 
+    0 0 0 2px rgb(9 175 232),
+    0 0 0 4px rgb(84, 198, 236),
+    0 0 0 6px rgb(112, 202, 231);
+  }
+  100% {
+    box-shadow: 
+    0 0 0 3px rgba(9, 176, 232, 0),
+    0 0 0 5px rgba(84, 198, 236, 0),
+    0 0 0 7px rgba(112, 201, 231, 0);
+  }
+}
+@media (max-width: 400px) {
+  .movableElement {
+    display: none;
+  }
+  .to-top-btn {
+    width: 40px;
+    height: 40px;
   }
 }

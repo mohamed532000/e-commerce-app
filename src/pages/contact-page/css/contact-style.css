@@ -1,0 +1,236 @@
+.contact-section {
+    position: relative;
+    width: 100%;
+    padding: 100px 0;
+}
+.contact-section .container {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgb(134, 134, 134);
+    height: 90vh;
+}
+.contact-section .container .contact-map {
+    position: relative;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+.contact-section .container .contact-map > input {
+    position: absolute;
+    width: 300px;
+    height: 40px;
+    border: 1px solid black;
+    background-color: #2b2b2b;
+    color: snow;
+    outline: none;
+    left: 150px;
+    top: 20px;
+    text-indent: 10px;
+}
+.contact-section .container .contact-map > iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.contact-form {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    background-color: white;
+    border-radius: 5px;
+    z-index: 999;
+    box-shadow: 0 2px 3px rgb(162, 162, 162);
+}
+.contact-form .contact-title {
+    position: relative;
+    margin: 20px 0;
+    padding: 10px;
+}
+.contact-form .contact-title > h2 {
+    font-size: 17px;
+    margin: 10px 0;
+}
+.contact-form .contact-title > p {
+    font-size: 15px;
+}
+.contact-form .form-div {
+    position: relative;
+}
+.contact-form .form-div form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-form .form-div form .input-div {
+    position: relative;
+    width: 300px;
+    height: 40px;
+    border-bottom: 1px solid black;
+    margin: 15px 0;
+}
+.contact-form .form-div form .input-div input,
+.contact-form .form-div form .input-div textarea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: none;
+    text-indent: 10px;
+    color: rgb(48, 48, 48);
+}
+.contact-section .container .contact-form  .form-div form .send-btn {
+    position: relative;
+    width: 170px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: rgb(34, 34, 34);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    color: snow;
+    font-size: 17px;
+    margin: 20px 0;
+    overflow: hidden;
+    
+}
+.contact-section .container .contact-form .form-div form .send-btn > p,
+.contact-section .container .contact-form .form-div form .send-btn > i {
+    position: absolute;
+    transition: .5s;
+}
+.contact-section .container .contact-form .form-div form .send-btn > i {
+    bottom: -50px;
+}
+.contact-section .container .contact-form .form-div form .send-btn:hover > p {
+    transform: translateY(-50px);
+}
+.contact-section .container .contact-form .form-div form .send-btn:hover > i {
+    bottom: 50%;
+    transform: translateY(50%);
+    opacity: 1;
+}
+.contact-info {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 10px 20px;
+}
+.contact-info .contact-box {
+    margin: 20px 10px;
+}
+.contact-info .call-us,
+.contact-info .adress-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.contact-info .adress-box .box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.contact-info .adress-box .box > i {
+    margin-right: 10px;
+    color: snow;
+}
+.contact-info .adress-box .box > p {
+    color: snow;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+.contact-info .call-us .call-title,
+.contact-info .adress-box .adress-title {
+    margin: 10px 0;
+    color: snow;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.contact-info .call-us .call-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    color: snow;
+}
+.contact-info .call-us .call-box > i {
+    margin-right: 5px;
+}
+.contact-info .contact-sochial > a {
+    margin: 10px;
+}
+.contact-info .contact-sochial > a > i {
+    font-size: 27px;
+    color: snow;
+    transition: .4s;
+}
+.contact-info .contact-sochial > a > i:hover {
+    transform: translateY(-5px);
+}
+@media (min-width:100px) and (max-width: 650px) {
+    .contact-form {
+        position: relative;
+        margin-top: 30px;
+        width: 100%;
+        right: 0;
+    }
+    .contact-form .contact-title {
+        padding: 10px 30px;
+    }
+    .contact-form .form-div form {
+        width: 100%;
+    }
+    .contact-form .form-div form .input-div {
+        width: 90%;
+    }
+    .contact-info {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact-info .contact-box {
+        justify-content: center;
+        align-items: center;
+    }
+    .contact-info .adress-box .box,
+    .contact-info .call-us .call-box {
+        margin: 5px 0;
+    }
+}
+@media (min-width:651px) and (max-width: 800px) {
+    .contact-section .container .contact-map > input {
+        width: 200px;
+    }
+}
+@media(max-width: 850px) {
+    .contact-section .container {
+        height: auto;
+    }
+    .contact-section .container .contact-map {
+        height: 400px;
+    }
+}
+@media(max-width: 950px) {
+    .contact-section .container .contact-map > input {
+        left: 10px;
+    }
+}

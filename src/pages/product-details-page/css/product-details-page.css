@@ -1,0 +1,266 @@
+.details-section {
+    padding: 50px 0 50px 0;
+}
+.details-section .shopping-title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 30px 0;
+    height: 50vh;
+    margin-bottom: 100px;
+}
+.details-section .shopping-title > h2 {
+    padding: 30px 0;
+    position: relative;
+}
+.details-section .container {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.details-section .container .product-images {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.details-section .container .product-images .main-img-div {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+.details-section .container .product-images .main-img-div > img.main-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .2s;
+}
+.details-section .container .product-images .main-img-div > img.main-img:hover {
+    transform: scale(1.3);
+}
+.details-section .container .product-images .images-div {
+    position: relative;
+    width: 100%;
+    display: flex;
+    margin-top: 5px;
+    gap: 5px;
+}
+.details-section .container .product-images .images-div > img {
+    position: relative;
+    width: 90px;
+    height: 90px;
+}
+.details-section .container > .product-info {
+    width: 500px;
+    position: relative;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.details-section .container  >.product-info .product-name {
+    position: relative;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: rgb(45, 45, 45);
+}
+.details-section .container > .product-info .product-raiting,
+.details-section .container > .product-info .addition {
+    position: relative;
+    display: flex;
+    gap: 4px;
+    margin: 10px 0;
+}
+.details-section .container > .product-info .addition {
+    gap: 0;
+}
+.details-section .container > .product-info .product-raiting > div {
+    display: flex;
+}
+.details-section .container > .product-info .product-raiting > div > div > i {
+    font-size: 20px;
+    color: gold;
+}
+.details-section .container > .product-info > p.product-price {
+    margin: 7px 0;
+    font-size: 20px;
+}
+.details-section .container > .product-info .addition .add-to-cart-btn {
+    position: relative;
+    padding: 10px 20px;
+    background-color: orangered;
+    color: snow;
+    border: none;
+    outline: none;
+    transition: .5s;
+    cursor: none;
+    letter-spacing: 1px;
+    font-weight: bold;
+    overflow: hidden;
+}
+.details-section .container > .product-info .arrow-img {
+    position: absolute;
+    top: 70px;
+    left: 120px;
+    width: 50px;
+    transform: rotateY(180deg);
+}
+.details-section .container > .product-info .addition .add-to-cart-btn > p {
+    transition: .5s;
+}
+.details-section .container > .product-info .addition .add-to-cart-btn > i {
+    font-size: 20px;
+    position: absolute;
+    left: 50%;
+    bottom: -50%;
+    transform: translateX(-50%);
+    transition: .5s;
+    opacity: 0;
+}
+.details-section .container > .product-info .addition .add-to-cart-btn:hover > p {
+    transform: translateY(-200%);
+    opacity: 0;
+}
+.details-section .container > .product-info .addition .add-to-cart-btn:hover > i {
+    bottom: 50%;
+    transform: translate(-50% , 50%);
+    opacity: 1;
+}
+.details-section .container > .product-info .product-text {
+    margin-top: 30px;
+}
+.details-section .container > .product-info .product-text > h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: normal;
+}
+.details-section .container > .product-info .product-text > h2 > span {
+    color: orangered;
+    font-weight: bold;
+}
+.details-section .container > .product-info .product-text > p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgb(63, 63, 63);
+}
+.container.related-products {
+    margin: 100px auto 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container.related-products .section-title {
+    text-align: center;
+    position: relative;
+    margin: 10px auto 50px auto;
+    font-size: 50px;
+    color: #e4e4e4;
+    padding: 20px 0;
+}
+.details-section .shopping-title > h2::before,
+.container.related-products .section-title::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    height: 3px;
+    background-color: orangered;
+}
+.details-section .shopping-title > h2::after,
+.container.related-products .section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -7.5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid orangered;
+    background-color: white;
+}
+.container.related-products .parent-of-slides {
+    padding: 30px 10px;
+    width: 100%;
+}
+.container.related-products .parent-of-slides .slide {
+    display: flex;
+    justify-content: center;
+}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after, .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    font-size: 25px;
+    box-shadow: 0px 0px 5px rgb(164, 164, 164);
+}
+@media (max-width: 400px) {
+    .details-section .container .product-images .images-div > img {
+        width: 50px;
+        height: 60px;
+    }
+}
+@media (max-width: 500px) {
+    .details-section .container .product-images,
+    .details-section .container .product-info {
+        width: 100%;
+    }
+    .details-section .container .product-images .images-div,
+    .details-section .container .product-info {
+        justify-content: space-between;
+        align-items: center;
+    }
+    .related-products .parent-of-slides .swiper-wrapper {
+        margin-bottom: 50px;
+    }
+    .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after, 
+    .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+        font-size: 15px;
+        box-shadow: 0px 0px 5px rgb(164, 164, 164);
+        padding: 5px 10px;
+    }
+}
+@media (min-width: 200px) and (max-width: 600px) {
+    .details-section .container > .product-info .arrow-img {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+}
+@media (min-width: 601px) and  (max-width: 855px) {
+    .details-section .container > .product-info .arrow-img {
+        position: absolute;
+        top: 70px;
+        left: 315px;
+        transform: rotateY(180deg);
+    }
+}
+@media (max-width: 855px) {
+    .details-section {
+        padding: 50px 0 50px 0;
+    }
+    .details-section .container {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .details-section .container .product-info {
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+    .details-section .container .product-info .product-text > h2,
+    .details-section .container .product-info .product-text > p {
+        text-align: center;
+    }
+}

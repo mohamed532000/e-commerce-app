@@ -1,0 +1,280 @@
+.login-page {
+    position: relative;
+    width: 100%;
+    background-color: rgb(246, 246, 246);
+    padding: 100px 0;
+    overflow: hidden;
+}
+.login-page .pubbl {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    z-index: 999;
+}
+.login-page .pubbl.first {
+    top: 0;
+    left: 0;
+    animation: bubbl-animate 10s linear infinite;
+}
+.login-page .pubbl.second {
+    top: 50px;
+    left: 40px;
+    animation: bubbl-animate 15s linear infinite;
+}
+.login-page .pubbl.last {
+    bottom: 50px;
+    right: 40px;
+    animation: bubbl-animate 15s linear infinite;
+    width: 200px;
+}
+@keyframes bubbl-animate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.login-page .pubbl > span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(8, 94, 128, 0.58);
+}
+.login-page .container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(8, 94, 128);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 1px 10px 10px rgb(91, 91, 91);
+}
+.login-page .container .to-home-icon {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    color: snow;
+    z-index: 9999;
+}
+.login-page .container .login-text,
+.login-page .container > form {
+    position: relative;
+    width: 50%;
+    height: 500px;
+    z-index: 999999;
+}
+.login-page .container .login-text, 
+.login-page .container .login-text .text-div {
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.login-page .container .login-text .text-div {
+    z-index: 999;
+    height: auto;
+}
+.login-page .container .login-text .text-div > h2 ,
+.login-page .container .login-text .text-div > p {
+    margin: 10px 0;
+    color: snow;
+    text-align: center;
+}
+.login-page .container .login-text > span {
+    position: absolute;
+    bottom: -360px;
+    left: -360px;
+    width: 0;
+    height: 0;
+    transform: rotate(-45deg);
+    color: snow;
+    font-size: 30px;
+    font-family: 'Segoe UI';
+    border: 360px solid;
+    border-color: transparent #0f0c35 transparent transparent;
+}
+.login-page .container .login-text svg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: none;
+}
+.login-page .container > form {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login-page .container > form .wrong-message {
+    position: relative;
+    width: 300px;
+    padding: 10px 0;
+    border: 1px solid red;
+    background-color: rgba(255, 0, 0, 0.381);
+    color: snow;
+    border-radius: 5px;
+    transition: .3s;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(5px);
+}
+.login-page .container > form .wrong-message.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+.login-page .container > form .input-div {
+    position: relative;
+    width: 350px;
+    height: 40px;
+    border-bottom: 1px solid rgb(0, 191, 255);
+    margin: 15px 0;
+} 
+.login-page .container > form .input-div label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: black;
+    transition: .4s;
+    z-index: 99;
+    color: rgba(0, 191, 255, 0.66);
+}
+.login-page .container > form .input-div .show-pass-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: rgb(0, 191, 255);
+}
+.login-page .container > form .input-div input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    text-indent: 5px;
+    background-color: transparent;
+    color: rgb(0, 191, 255);
+}
+.login-page .container > form .input-div:hover label {
+    transform: translateY(-30px);
+}
+.login-page .container > form .input-div label.active {
+    transform: translateY(-30px);
+}
+.login-page .container > form > button {
+    position: relative;
+    margin: 15px 0;
+    width: 350px;
+    padding: 10px 0;
+    border: none;
+    outline: none;
+    color: snow;
+    background-color: #0f0c35;
+}
+.login-page .container > form > p {
+    margin: 10px 0;
+    color: snow;
+    text-align: center;
+}
+.login-page .container > form .sochial-accounts {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-page .container > form .sochial-accounts > a {
+    margin: 5px 10px;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: .3s;
+}
+.login-page .container > form .sochial-accounts > a:hover {
+    transform: translateY(-5px);
+}
+.login-page .container > form .sochial-accounts > a img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.login-page .container > form > p > a {
+    color: rgb(0, 191, 255);
+    transition: .3s;
+    position: relative;
+    display: inline-flex;
+}
+.login-page .container > form > p > a:hover {
+    text-shadow: 1px 1px 3px rgb(0, 191, 255);
+    transform: translateY(-5px);
+}
+@media (max-width: 400px) {
+    .login-page .container > form .sochial-accounts > a {
+        width: 20px;
+        height: 20px;
+    }
+}
+@media (max-width: 510px) {
+    .login-page .container form .input-div,
+    .login-page .container form button,
+    .login-page .container > form .wrong-message {
+        width: 90%;
+        margin: 10px 0;
+    }
+    .login-page .container > form .input-div .show-pass-icon {
+        font-size: 14px;
+    }
+    .login-page .container > form > p,
+    .login-page .container form .input-div label {
+        font-size: 12px;
+    }
+    .login-page .container > form > p {
+        padding: 0 5px;
+    }
+}
+@media (max-width: 650px) {
+    .login-page .container .login-text {
+        display: none;
+    }
+}
+@media (max-width: 785px) {
+    .login-page .container form {
+        width: 100%;
+    }
+}
+@media (max-width: 945px) {
+    .login-page .container {
+        flex-direction: column;
+    }
+    .login-page .container .login-text {
+        width: 100%;
+        background-color: #0f0c35;
+    }
+    .login-page .container .login-text > span {
+        display: none;
+    }
+    .login-page .container .login-text svg {
+        display: block;
+    }
+    .login-page .container form {
+        padding: 10px 0;
+    }
+}

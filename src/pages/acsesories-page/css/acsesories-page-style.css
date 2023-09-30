@@ -1,0 +1,47 @@
+.head-section {
+    position: relative;
+    width: 100%;
+    padding: 100px 0 50px 0;
+    height: 100vh;
+}
+.head-section .container {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.head-section .container .head-text {
+    position: relative;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+.head-section .container .head-text > h2 ,
+.head-section .container .head-text > p {
+    margin: 10px 0;
+}
+.head-section .container .head-text > h2 {
+    color: orangered;
+    font-size: 40px;
+    font-weight: normal;
+}
+.head-section .container .head-text > p {
+    line-height: 1.6;
+}
+.head-section .container .parent-of-slides {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+.head-section .container .parent-of-slides .slide {
+    position: relative;
+}
+.head-section .container .parent-of-slides .slide > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

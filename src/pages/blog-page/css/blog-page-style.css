@@ -1,0 +1,187 @@
+.blog-page,
+.blog-page .blog-head {
+    position: relative;
+    width: 100%;
+    padding: 100px 0 0 0;
+    display: flex;
+    flex-direction: column;
+}
+.blog-page .blog-head,
+.blog-page .blog-head .links {
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.blog-page .blog-head {
+    background-color: rgb(249 249 249);
+}
+.blog-page .blog-head .links {
+    padding: 0;
+    color: rgb(113, 113, 113);;
+}
+.blog-page .blog-head .links > a,
+.blog-page .blog-head .links > p {
+    margin: 0 10px;
+}
+.blog-page .blog-head .links > a {
+    color: rgb(113, 113, 113);
+}
+.blog-page .blog-head .links > p {
+    color: orangered;
+}
+.blog-page .blog-head > i {
+    display: none;
+}
+.blog-page-content {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+.blog-page-content .aside {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+.blog-page-content .aside .search-input {
+    position: relative;
+    width: 300px;
+    height: 40px;
+    border: 1px solid rgb(161, 161, 161);
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.blog-page-content .aside .search-input > input {
+    position: relative;
+    width: 90%;
+    height: 100%;
+    border: none;
+    outline: none;
+    text-indent: 10px;
+    background-color: transparent;
+    cursor: none;
+}
+.blog-page-content .aside .aside-box {
+    margin-bottom: 20px ;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 4px rgb(203, 203, 203);
+}
+.blog-page-content .aside .aside-box > h2 {
+    margin-bottom: 10px;
+    font-weight: normal;
+    font-size: 18px;
+}
+.blog-page-content .aside .aside-box ul {
+    position: relative;
+}
+.blog-page-content .aside .aside-box ul li {
+    padding: 15px 0;
+    position: relative;
+    width: 100%;
+    transition: .3s;
+    border-bottom: .5px solid #e8e8e8;
+}
+.blog-page-content .aside .aside-box ul li:hover {
+    transform: translateX(-5px);
+    color: orangered;
+}
+.aside-box.instagram-box .insta-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 10px 0;
+}
+.aside-box.instagram-box .insta-boxes a {
+    position: relative;
+    width: 120px;
+    height: 60px;
+    overflow: hidden;
+}
+.aside-box.instagram-box .insta-boxes a img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .3s;
+}
+.aside-box.instagram-box .insta-boxes a:hover img {
+    transform: scale(1.1);
+}
+.aside-box .posts-boxes,
+.aside-box .posts-boxes .post-box .post-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.aside-box .posts-boxes .post-box {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.aside-box .posts-boxes .post-box i {
+    font-size: 27px;
+    margin-right: 20px;
+}
+.aside-box .posts-boxes .post-box .post-content {
+    margin: 0;
+}
+.aside-box .posts-boxes .post-box .post-content > h2 {
+    font-size: 16px;
+}
+.aside-box .posts-boxes .post-box .post-content > p {
+    font-size: 13px;
+}
+.blog-page-content .content {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 30px;
+    gap: 10px;
+}
+@media (min-width: 100px) and (max-width: 550px) {
+    .blog-page .blog-head > i {
+        display: block;
+    }
+    .blog-page-content .aside {
+        position: absolute;
+        z-index: 99;
+        width: 90%;
+        left: -100%;
+        transition: .5s;
+        opacity: 0;
+        background-color: aliceblue;
+        border-radius: 5px;
+    }
+    .blog-page-content .content {
+        margin-left: 0;
+    }
+    .blog-page-content .aside.active {
+        left: 50%;
+        opacity: 1;
+        transform: translateX(-50%);
+    }
+}
+@media (max-width: 780px) {
+    .blog-page-content .content {
+        width: 100%;
+    }
+}
+@media (min-width: 551px) and (max-width: 780px) {
+    .blog-page-content .aside {
+        width: 200px;
+    }
+    .blog-page-content .aside .aside-box > h2 {
+        font-size: 17px;
+    }
+}

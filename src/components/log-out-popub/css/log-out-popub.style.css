@@ -1,0 +1,160 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.log-out-parent {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+}
+.log-out-parent.active {
+    visibility: visible;
+    opacity: 1;
+}
+.popub-form {
+    position: relative;
+    transform: translateY(-10px);
+    width: 400px;
+    padding: 20px;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    transition: .5s;
+    flex-direction: column;
+}
+.log-out-parent.active > .popub-form {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+.log-out-parent .popub-form > img {
+    width: 50px;
+    margin: 10px 0 20px 0;
+    transform: rotate(180deg);
+}
+.log-out-parent .popub-form .close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 23px;
+    z-index: 999;
+}
+.log-out-parent .popub-form .close-icon > span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+.log-out-parent .popub-form .close-icon > span.first {
+    transform: translateY(-50%)rotate(45deg);
+}
+.log-out-parent .popub-form .close-icon > span.second {
+    transform: translateY(-50%)rotate(-45deg);
+}
+.log-out-parent .popub-form > h2 {
+    text-align: center;
+    font-size: 17px;
+}
+.log-out-parent .popub-form .login-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    width: 100%;
+}
+.log-out-parent .popub-form .login-form .wrong-message {
+    position: absolute;
+    z-index: 99;
+    width: 300px;
+    padding: 7px 0;
+    border: 1px solid red;
+    background-color: rgba(255, 0, 0, 0.381);
+    color: snow;
+    border-radius: 5px;
+    transition: .3s;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+}
+.log-out-parent .popub-form .login-form .wrong-message.active {
+    position: relative;
+    visibility: visible;
+    opacity: 1;
+}
+.log-out-parent .popub-form .login-form > input {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    text-indent: 10px;
+    outline: none;
+    margin: 10px 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 1px 1px 4px #afafaf;
+}
+.log-out-parent .popub-form .login-form .login-btn {
+    position: relative;
+    width: 100%;
+    border-radius: 3px;
+    padding: 12px 0;
+    background-image: linear-gradient(45deg , #0aa9ce , #6957a4);
+    color: snow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    margin: 10px 0;
+    box-shadow: 2px 2px 5px #979797;
+}
+.log-out-parent .popub-form .login-form .login-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 1s;
+    background-image: linear-gradient(45deg , #6957a4 ,#0aa9ce);
+    z-index: 4;
+}
+.log-out-parent .popub-form .login-form .login-btn:hover::after {
+    opacity: 1;
+}
+.log-out-parent .popub-form .login-form .login-btn > p {
+    font-size: 17px;
+    z-index: 5;
+}
+.log-out-parent .popub-form .login-form .login-btn > i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+}
+@media (max-width: 500px) {
+    .login-popub-parent .popub-child .login-popub-form .login-form .wrong-message {
+        width: 100%;
+    }
+}

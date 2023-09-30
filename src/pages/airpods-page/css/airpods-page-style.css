@@ -1,0 +1,11 @@
+@media (max-width: 450px) {
+    .parent-of-slides .slide-content {
+        width: fit-content;
+        margin: 100px 0 0 0;
+    }
+}
+@media (max-width: 600px) {
+    .parent-of-slides {
+        width: 100%;
+    }
+}

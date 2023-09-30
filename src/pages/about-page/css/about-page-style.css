@@ -1,0 +1,420 @@
+.about-section-head {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.about-section-head > img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 8;
+}
+.about-section-head::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.292);
+    z-index: 10;
+}
+.about-section-head .container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    z-index: 99;
+}
+.about-section-head .container .head-text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 10px;
+}
+.about-section-head .container .head-text > h1 {
+    margin: 10px 0;
+    font-size: 40px;
+    color: snow;
+    letter-spacing: 1px;
+}
+.about-section-head .container .head-text > p {
+    margin: 10px 0;
+    font-size: 20px;
+}
+.about-section-head .container .head-text > .links {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    color: rgb(255, 255, 255);
+}
+.about-section-head .container .head-text > .links > a,
+.about-section-head .container .head-text > .links > p {
+    margin: 0 10px;
+} 
+.about-section-head .container .head-text > .links > a {
+    color: #cfcfcf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-section-head .container .head-text > .links > a > i {
+    margin-right: 3px;
+    font-size: 14px;
+}
+.about-section-head .container .head-text > .links > p {
+    color: rgb(255, 255, 255);
+}
+.section.info-about-us {
+    position: relative;
+    width: 100%;
+    z-index: 99;
+}
+.section.info-about-us .container {
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    top: -100px;
+    background-color: rgb(244, 244, 244);
+}
+.section.info-about-us .container .text,
+.section.info-about-us .container .img {
+    position: relative;
+    width: calc(100% / 2);
+}
+.section.info-about-us .container .text::after {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: orangered;
+    opacity: .7;
+    z-index: 1;
+}
+.section.info-about-us .container .text > .text-head {
+    margin: 20px 0;
+    font-size: 40px;
+    text-align: center;
+    color: rgb(75, 75, 75);
+    font-weight: normal;
+    z-index: 9;
+}
+.section.info-about-us .container .text .info-box {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px 0;
+    padding-left: 10px;
+    z-index: 9;
+}
+.section.info-about-us .container .text .info-box p {
+    color: rgb(65, 65, 65);
+    line-height: 1.6;
+    font-size: 14px;
+}
+.section.info-about-us .container .img {
+    height: 500px;
+    overflow: hidden;
+}
+.section.info-about-us .container .img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.choose-us-reasons {
+    position: relative;
+    width: 100%;
+    padding: 50px 0;
+}
+.choose-us-reasons .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.choose-us-reasons .container .images {
+    position: relative;
+    width: 500px;
+    height: 400px;
+    padding: 10px;
+}
+.choose-us-reasons .container .images img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}   
+.choose-us-reasons .container .images img.second-img {
+    height: 90%;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}    
+.choose-us-reasons .container .images:hover img.second-img {
+    height: 100%;
+    left: 0;
+    top: 0;
+    transform: translateY(0);
+    opacity: 0;
+}
+.choose-us-reasons .container .services,
+.choose-us-reasons .container .services .title,
+.choose-us-reasons .container .services .services-boxes,
+.choose-us-reasons .container .services .parent,
+.choose-us-reasons .container .services .parent .serv-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.choose-us-reasons .container .services .title {
+    margin: 10px 0 40px 0;
+}
+.choose-us-reasons .container .services .title > h2 {
+    margin: 10px 0;
+}
+.choose-us-reasons .container .services .services-boxes,
+.choose-us-reasons .container .services .parent .serv-box {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.choose-us-reasons .container .services .parent .serv-box {
+    width: 300px;
+    align-items: flex-start;
+    margin: 10px 0;
+}
+.choose-us-reasons .container .services .parent .serv-box > i {
+    font-size: 30px;
+    margin: 10px;
+    transition: .3s;
+}
+.choose-us-reasons .container .services .parent .serv-box .serv-info h3,
+.choose-us-reasons .container .services .parent .serv-box .serv-info p {
+    margin: 5px 0;
+    transition: .3s;
+}
+.choose-us-reasons .container .services .parent .serv-box .serv-info h3 {
+    font-size: 16px;
+}
+.choose-us-reasons .container .services .parent .serv-box .serv-info p {
+    font-size: 14px;
+}
+.choose-us-reasons .container .services .parent .serv-box:hover i,
+.choose-us-reasons .container .services .parent .serv-box:hover .serv-info h3 {
+    color: orangered;
+}
+.team-section {
+    position: relative;
+    width: 100%;
+    padding: 50px 0;
+}
+.section-head {
+    position: relative;
+    width: fit-content;
+    margin: 40px auto 100px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section-head h2 {
+    font-weight: normal;
+    position: relative;
+    padding: 0 10px;
+    font-size: 50px;
+    opacity: .3;
+}
+.section-head h2::after,
+.section-head h2::before {
+    content: "";
+    position: absolute;
+    background-color: orangered;
+    width: 2px;
+    height: 100%;
+    bottom: 0;
+}
+.section-head h2::after {
+    right: 0;
+}
+.section-head h2::before {
+    left: 0;
+}
+.section-head p {
+    font-size: 15px;
+    margin: 10px 0;
+    text-align: center;
+}
+.team-section .container {
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.team-section .container .person-card .card-content,
+.team-section .container .person-card .card-content .person-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.team-section .container .person-card .card-content {
+    width: 300px;
+    border-radius: 5px;
+}
+.team-section .container .person-card .card-content .img {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: inherit;
+}
+.team-section .container .person-card .card-content .img > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.team-section .container .person-card .card-content .person-info {
+    justify-content: flex-start;
+    width: 100%;
+    transition: .8s;
+}
+.team-section .container .person-card .card-content .person-info > h2 ,
+.team-section .container .person-card .card-content .person-info > p {
+    margin: 5px 0;
+    position: relative;
+    text-align: center;
+    text-align: c;
+    bottom: -100px;
+    opacity: 0;
+    transition: .5s;
+    transition-delay: var(--i);
+}
+.team-section .container .person-card .card-content .person-info > h2 {
+    font-size: 17px;
+}
+.team-section .container .person-card .card-content .person-info > p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.team-section .container .person-card .card-content:hover .person-info > h2 ,
+.team-section .container .person-card .card-content:hover .person-info > p {
+    bottom: 0;
+    opacity: 1;
+}
+.team-section .container .person-card .card-content .person-info .person-contact {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.team-section .container .person-card .card-content .person-info .person-contact a {
+    margin: 10px;
+    position: relative;
+    bottom: -40px;
+    transition: .5s;
+    transition-delay: var(--i);
+    opacity: 0;
+}
+.team-section .container .person-card .card-content:hover .person-info .person-contact a {
+    bottom: 0;
+    opacity: 1;
+}
+.team-section .container .person-card .card-content .person-info .person-contact a i {
+    font-size: 25px;
+    color: rgb(35, 35, 35);
+}
+@media (min-width: 200px) and (max-width: 550px) {
+    .section.info-about-us .container .text .info-box p {
+        font-size: 13px;
+    }
+}
+@media (max-width: 450px) {
+    .section.info-about-us .container .img {
+        height: 300px;
+    }
+}
+@media (max-width: 660px) { 
+    .choose-us-reasons .container .images {
+        width: 90%;
+    }
+}
+@media (max-width: 660px) {
+    .choose-us-reasons .container .services .services-boxes,
+    .choose-us-reasons .container .services .parent,
+    .choose-us-reasons .container .services .parent .serv-box {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .choose-us-reasons .container .services .parent .serv-box {
+        width: 100%;
+    }
+    .choose-us-reasons .container .services .parent .serv-box .serv-info h3 ,
+    .choose-us-reasons .container .services .parent .serv-box .serv-info p,
+    .choose-us-reasons .container .services .title {
+        text-align: center;
+    }
+}
+@media (min-width: 100px) and (max-width: 399px) {
+    .team-section .container .person-card .card-content {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .team-section .container .person-card .card-content .img {
+        height: 350px;
+    }
+}
+@media (min-width: 400px) and (max-width: 615px) {
+    .team-section .container .person-card .card-content {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+@media (min-width: 616px) and (max-width: 839px) {
+    .team-section .container .person-card .card-content {
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 1029.33px) {
+    .section.info-about-us .container,
+    .choose-us-reasons .container {
+        flex-direction: column;
+    }
+    .section.info-about-us .container .text,
+    .section.info-about-us .container .img {
+        width: 90%;
+    }
+    .section.info-about-us .container .text {
+        text-align: center;
+    }
+}

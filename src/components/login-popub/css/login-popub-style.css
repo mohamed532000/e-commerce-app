@@ -1,0 +1,304 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    cursor: none;
+}
+.login-popub-parent {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999999999999999;
+    background-color: rgba(0, 0, 0, 0.671);
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-popub-parent.active {
+    visibility: visible;
+    opacity: 1;
+}
+.login-popub-parent .popub-child {
+    position: relative;
+    width: 80%;
+    display: flex;
+    background-color: white;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgb(70, 70, 70);
+}
+.login-popub-parent .popub-child .close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 27px;
+    height: 25px;
+    z-index: 999;
+}
+.login-popub-parent .popub-child .close-icon > span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+.login-popub-parent .popub-child .close-icon > span.first {
+    transform: translateY(-50%)rotate(45deg);
+}
+.login-popub-parent .popub-child .close-icon > span.second {
+    transform: translateY(-50%)rotate(-45deg);
+}
+.login-popub-parent .popub-child .login-popub-form,
+.login-popub-parent .popub-child .popub-img {
+    position: relative;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login-popub-parent .popub-child .popub-img > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.login-popub-parent .popub-child .login-popub-form > h2 {
+    margin: 10px 0 20px 0;
+}
+.login-popub-parent .popub-child .login-popub-form .google-btn {
+    position: relative;
+    width: 400px;
+    padding: 10px 0;
+    border-radius: 3px;
+    color: snow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(31, 31, 31);
+    box-shadow: 1px 1px 3px rgb(199, 199, 199);
+    transition: .5s;
+}
+.login-popub-parent .popub-child .login-popub-form .google-btn > img {
+    width: 30px;
+    margin-left: 4px;
+}
+.login-popub-parent .popub-child .login-popub-form .google-btn:hover {
+    transform: translateY(-5px);
+}
+.login-popub-parent .popub-child .login-popub-form .choosing-div {
+    position: relative;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.login-popub-parent .popub-child .login-popub-form .choosing-div > span {
+    position: relative;
+    width: 25%;
+    height: 1px;
+    background-color: #8c8c8c;
+}
+.login-popub-parent .popub-child .login-popub-form .login-form .choosing-div > p {
+    font-size: 14px;
+}
+.login-popub-parent .popub-child .login-popub-form .login-form {
+    position: relative;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+.login-popub-parent .popub-child .login-popub-form .login-form .wrong-message {
+    position: absolute;
+    z-index: 99;
+    width: 300px;
+    padding: 7px 0;
+    border: 1px solid red;
+    background-color: rgba(255, 0, 0, 0.381);
+    color: snow;
+    border-radius: 5px;
+    transition: .3s;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+}
+.login-popub-parent .popub-child .login-popub-form .login-form .wrong-message.active {
+    position: relative;
+    visibility: visible;
+    opacity: 1;
+}
+.login-popub-parent .popub-child .login-popub-form  .login-form > input {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    text-indent: 10px;
+    outline: none;
+    margin: 10px 0;
+}
+.login-popub-parent .popub-child .login-popub-form .login-form .keep-me {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+.login-popub-parent .popub-child .login-popub-form .login-form .keep-me > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-popub-parent .popub-child .login-popub-form .login-form .keep-me > div > input,
+.login-popub-parent .popub-child .login-popub-form .login-form .keep-me > div > label {
+    cursor: none;
+}
+.login-popub-parent .popub-child .login-popub-form .login-form .keep-me > a {
+    color: black;
+    font-size: 14px;
+}
+.login-popub-parent .popub-child .login-popub-form .login-form .keep-me > div > label {
+    margin-left: 5px;
+}
+.login-popub-parent .popub-child .login-popub-form .login-form .login-btn {
+    position: relative;
+    width: 100%;
+    border-radius: 3px;
+    padding: 12px 0;
+    background-color: rgb(4, 81, 182);
+    color: snow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    margin: 10px 0;
+}
+.login-popub-parent .popub-child .login-popub-form .login-form .login-btn > p {
+    font-size: 17px;
+}
+.login-popub-parent .popub-child .login-popub-form .login-form .login-btn > i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.login-popub-parent .popub-child .login-popub-form .login-form > p {
+    margin: 10px 0;
+}
+.login-popub-parent .popub-child .login-popub-form .login-form > p > a {
+    text-decoration: underline;
+    color: rgb(15, 117, 155);
+}
+@media (min-width : 100px) and (max-width: 300px) {
+    .login-popub-parent .popub-child .login-popub-form .choosing-div > p {
+        font-size: 9px;
+    }
+    .login-popub-parent .popub-child .login-popub-form .choosing-div > span {
+        width: 20%;
+    }
+    .login-popub-parent .popub-child .login-popub-form .login-form .keep-me > div > label,
+    .login-popub-parent .popub-child .login-popub-form .login-form .keep-me > a {
+        font-size: 10px;
+    }
+}
+@media (min-width : 301px) and (max-width: 400px) {
+    .login-popub-parent .popub-child .login-popub-form .choosing-div > p {
+        font-size: 11px;
+    }
+    .login-popub-parent .popub-child .login-popub-form .choosing-div > span {
+        width: 20%;
+    }
+}
+@media (min-width : 200px) and (max-width: 500px) {
+    .login-popub-parent .popub-child {
+        width: 90%;
+    }
+    .login-popub-parent .popub-child .close-icon {
+        width: 20px;
+        height: 18px;
+    }
+    .login-popub-parent .popub-child .login-popub-form {
+        width: 90%;
+    }
+    .login-popub-parent .popub-child .login-popub-form > h2 {
+        margin: 5px 0;
+        font-size: 15px;
+    }
+    .login-popub-parent .popub-child .login-popub-form > .login-form,
+    .login-popub-parent .popub-child .login-popub-form > .google-btn,
+    .login-popub-parent .popub-child .login-popub-form .choosing-div,
+    .login-popub-parent .popub-child .login-popub-form .login-form .wrong-message  {
+        width: 100%;
+    }
+    .login-popub-parent .popub-child .login-popub-form > .google-btn {
+        margin: 10px 0;
+        padding: 5px 0;
+    }
+    .login-popub-parent .popub-child .login-popub-form > .google-btn > p {
+        font-size: 13px;
+    }
+    .login-popub-parent .popub-child .login-popub-form > .google-btn > img {
+        width: 25px;
+    }
+    .login-popub-parent .popub-child .login-popub-form .login-form > input {
+        height: 30px;
+    }
+    .login-popub-parent .popub-child .login-popub-form .choosing-div{
+        margin: 0;
+        font-size: 15px;
+    }
+    .login-popub-parent .popub-child .login-popub-form .login-form .login-btn {
+        padding: 10px 0;
+    }
+    .login-popub-parent .popub-child .login-popub-form .login-form .login-btn > p {
+        font-size: 12px;
+    }
+    .login-popub-parent .popub-child .login-popub-form .login-form > p {
+        text-align: center;
+        font-size: 12px;
+    }
+}
+@media(min-width : 501px) and (max-width: 1029.33px) {
+    .login-popub-parent .popub-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        border-radius: 5px;
+    }
+}
+@media (max-width: 1029.33px) {
+    .login-popub-parent .popub-child .login-popub-form {
+        margin: 25px 20px;
+    }
+    .login-popub-parent .popub-child .login-popub-form {
+        width: 100%;
+    }
+    .login-popub-parent .popub-child .popub-img {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

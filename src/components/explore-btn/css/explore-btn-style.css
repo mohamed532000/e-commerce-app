@@ -1,0 +1,57 @@
+a.explore-btn {
+    position: relative;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 3px rgb(83, 83, 83);
+    border-radius: 25px;
+    width: 200px;
+    height: 45px;
+    margin-top: 20px;
+    transition: .4s;
+}
+a.explore-btn:hover {
+    background-color: orangered;
+    color: snow;
+}
+a.explore-btn > p {
+    font-size: 17px;
+}
+a.explore-btn > i {
+    margin-left: 10px;
+    font-size: 20px;
+    margin-top: 5px;
+}
+a.explore-btn:hover > i {
+    animation: explore-animate 1s ease-in infinite both;
+}
+@keyframes explore-animate {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(5px);
+    }
+    50% {
+        transform: translateX(2px);
+    }
+    75% {
+        transform: translateX(4px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@media (max-width: 400px) {
+    a.explore-btn {
+        width: 170px;
+        height: 40px;
+    }
+    a.explore-btn > i {
+        font-size: 20px;
+    }
+}
