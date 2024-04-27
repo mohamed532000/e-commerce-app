@@ -49,8 +49,7 @@ function HomePage() {
             },
         },
     }
-    let lastDate = new Date('10 1 2023 , 23:59:59').getTime();
-
+    let lastDate = new Date('10 1 2024 , 23:59:59').getTime();
     let [days , setDays] = useState();
     let [hours , setHours] = useState();
     let [minutes , setMinutes] = useState();

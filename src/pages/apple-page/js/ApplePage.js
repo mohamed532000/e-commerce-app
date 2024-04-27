@@ -18,7 +18,7 @@ function ApplePage() {
     let [productsStorages , setproductsStorages] = useState([]);
     let [minPrice , setMinPrice] = useState();
     let [maxPrice , setMaxPrice] = useState();
-    let lastDate = new Date("12 7 2023 23:59:59").getTime();
+    let lastDate = new Date("12 7 2024 23:59:59").getTime();
     let [days , setDays] = useState();
     let [hours , setHours] = useState();
     let [minutes , setMinutes] = useState();
